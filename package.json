@@ -1,0 +1,23 @@
+{
+  "name": "p3_vs_codev2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plo-K2on/P3_VS_Code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Plo-K2on/P3_VS_Code/issues"
+  },
+  "homepage": "https://github.com/Plo-K2on/P3_VS_Code#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}

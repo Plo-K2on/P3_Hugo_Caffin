@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("./Raleway/Raleway-VariableFont_wght.ttf");
+  font-weight: 100 1000;
+}
+body h2 {
+  color: black;
+}
+body p {
+  color: black;
+}
+body a {
+  text-decoration: none;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 500px;
+  margin-left: 40px;
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+header h1 {
+  display: flex;
+  justify-content: center;
+}
+header p {
+  display: flex;
+  justify-content: center;
+}
+header figure {
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0;
+}
+header .lieu {
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .lieu__p {
+  margin-left: 10px;
+}
+header .indication {
+  background-color: #f6f6f6;
+}
+header .explorez {
+  background-color: #9356DC;
+  border-radius: 30px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 615px;
+}
+header .explorez__p {
+  color: white;
+}
+header .etapes {
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  margin-left: 580px;
+  margin-bottom: 15px;
+}
+header .etapes__chiffre {
+  padding: 7px 12px 7px 12px;
+  background-color: #9356DC;
+  border-radius: 15px;
+  color: white;
+  margin-left: -35px;
+}
+header .etapes i {
+  padding: 0 10px;
+}
+
+.page_menus {
+  border-radius: 10px 10px 0 0;
+  margin-top: -20px;
+  margin: 15px 0 0 0;
+  background-color: #eaeaea;
+}
+.page_menus img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+.titre_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+}
+
+.choix {
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0;
+  margin: 10px 10px 10px 10px;
+}
+.choix h2 {
+  margin: 0 10px 0 10px;
+}
+.choix .detail__menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+
+.explorez {
+  background-color: #9356DC;
+  border-radius: 30px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 615px;
+  color: white;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 5px 0 5px 0;
+}
+.restaurants img {
+  width: 100%;
+  object-fit: cover;
+}
+.restaurants .restaurant {
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 0;
+}
+.restaurants .restaurant__image {
+  display: flex;
+  overflow: hidden;
+  height: 120px;
+  flex-shrink: 0;
+  min-width: 100%;
+}
+.restaurants .restaurant__details--titre {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 15px 0 15px;
+}
+.restaurants .restaurant__details--description {
+  margin: 0 15px 0 15px;
+}
+
+footer {
+  background-color: #353535;
+}
+footer h3 {
+  color: white;
+}
+footer p {
+  color: white;
+}
+footer .footer_icone i {
+  color: white;
+  display: flex;
+}
+footer .footer_icone p {
+  color: white;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

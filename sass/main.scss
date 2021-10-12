@@ -1,0 +1,156 @@
+@import "./variables.scss";
+
+body {
+    // max-width: 400px;
+    h2{
+        color: black;
+    }
+    p{
+        color: black;
+    }
+    a{
+        text-decoration: none;
+    }
+    
+}
+
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 500px;
+    margin-left: 40px;
+}
+header {
+    a{
+        @include logo;
+    }
+    h1{
+        @include header_h1;
+    }
+    p{
+        @include header_p;
+    }
+    figure{
+        @include figure; 
+    }
+    
+
+    .lieu{
+        @include lieu;
+
+        &__p{
+            margin-left: 10px
+        }
+    }
+    .indication{
+        @include indication;
+    }
+    .explorez{
+        @include explorez;
+
+        &__p{
+            color: white
+        }
+
+    }
+    .etapes{
+        @include etapes;
+        
+        &__chiffre{
+            @include etapes_chiffre;
+        }
+        i{
+            padding: 0 10px;
+        }
+    }
+}
+
+.page_menus{
+    border-radius: 10px 10px 0 0;
+    margin-top: -20px;
+    margin: 15px 0 0 0;
+    background-color: #eaeaea;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 250px;
+    }
+}
+.titre_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+.choix{
+    @include figure;
+    margin: 10px 10px 10px 10px;
+        h2{
+            margin: 0 10px 0 10px; 
+        }
+        .detail__menu{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10px 0 10px;
+        }
+} 
+.explorez{
+    @include explorez;
+    color: white;
+}
+
+.restaurants{
+        background-color: $back-color;
+        padding: 5px 0 5px 0;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+    .restaurant{
+        @include figure;
+
+        &__image{
+            display: flex;
+            overflow: hidden;
+            height: 120px;
+            flex-shrink: 0;
+            min-width: 100%;
+        }
+        &__details{
+
+            &--titre{
+                @include titre;
+                }
+            &--description{
+                @include description;
+                }
+        }
+    }
+}
+
+footer{
+    background-color: #353535;
+
+    h3{
+    color: white;
+    }
+    p{
+        color: white;
+    }
+
+    .footer_icone{
+        
+        i{
+            color:white;
+            display: flex;
+        }
+        p{
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+}

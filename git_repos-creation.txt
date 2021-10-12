@@ -1,0 +1,7 @@
+echo "# P3_Hugo_Caffin" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Plo-K2on/P3_Hugo_Caffin.git
+git push -u origin main

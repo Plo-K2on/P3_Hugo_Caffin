@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("./Raleway/Raleway-VariableFont_wght.ttf");
+    font-weight: 100 1000;
+}
+
+$primary_color :#9356DC;
+$secondary_color: #99E2D0;
+$thirty_color: #30A387;
+$back-color: #f6f6f6;
+
+@mixin logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+@mixin header_h1 {
+    display: flex;
+    justify-content: center;
+}
+@mixin  header_p {
+    display: flex;
+    justify-content: center;
+}
+@mixin lieu {
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin indication{
+    background-color: $back-color;
+}
+@mixin explorez{
+    background-color: $primary_color;
+    border-radius: 30px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 615px;
+}
+@mixin etapes {
+    background-color: $back-color;
+    border-radius: 15px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    margin-left: 580px;
+    margin-bottom: 15px;
+}
+@mixin etapes_chiffre {
+    padding: 7px 12px 7px 12px;
+    background-color: $primary_color;
+    border-radius: 15px;
+    color: white;
+    margin-left: -35px
+}
+@mixin restaurant {
+    border-radius: 10px;
+}
+@mixin figure {
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 0;
+}
+@mixin titre {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px 0 15px;
+}
+@mixin description {
+    margin: 0 15px 0 15px;
+}
+@mixin detail_menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
