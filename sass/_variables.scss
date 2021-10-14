@@ -33,7 +33,8 @@ $back-color: #f6f6f6;
     background-color: $back-color;
 }
 @mixin explorez{
-    background-color: $primary_color;
+    background: linear-gradient($primary_color, purple);
+    box-shadow: 2px 2px gray;
     border-radius: 30px;
     width: 220px;
     display: flex;

@@ -53,7 +53,8 @@ header .indication {
   background-color: #f6f6f6;
 }
 header .explorez {
-  background-color: #9356DC;
+  background: linear-gradient(#9356DC, purple);
+  box-shadow: 2px 2px gray;
   border-radius: 30px;
   width: 220px;
   display: flex;
@@ -120,7 +121,8 @@ header .etapes i {
 }
 
 .explorez {
-  background-color: #9356DC;
+  background: linear-gradient(#9356DC, purple);
+  box-shadow: 2px 2px gray;
   border-radius: 30px;
   width: 220px;
   display: flex;
@@ -128,6 +130,11 @@ header .etapes i {
   align-items: center;
   margin-left: 615px;
   color: white;
+}
+.explorez:hover {
+  transition: 500ms;
+  background: linear-gradient(#ae80e5, #b300b3);
+  box-shadow: 3px 3px gray;
 }
 
 .restaurants {

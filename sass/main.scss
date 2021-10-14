@@ -87,18 +87,29 @@ header {
 .choix{
     @include figure;
     margin: 10px 10px 10px 10px;
-        h2{
-            margin: 0 10px 0 10px; 
-        }
-        .detail__menu{
-            display: flex;
-            justify-content: space-between;
-            margin: 0 10px 0 10px;
-        }
+    h2{
+        margin: 0 10px 0 10px; 
+    }
+    .detail__menu{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px 0 10px;
+    }
 } 
 .explorez{
     @include explorez;
     color: white;
+    
+        &:hover{
+            transition: 500ms;
+            background: linear-gradient(
+                lighten($primary_color, 10%),
+                lighten(purple, 10%) 
+            );
+            // transition-duration: 500ms;
+            box-shadow: 3px 3px gray;
+        }
+    
 }
 
 .restaurants{
