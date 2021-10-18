@@ -13,7 +13,7 @@ body a {
   text-decoration: none;
 }
 
-.header_menu {
+.logo_page_menu {
   display: flex;
   justify-content: space-between;
   margin-right: 500px;
@@ -36,9 +36,8 @@ header p {
 }
 header figure {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   text-decoration: none;
-  margin: 0;
 }
 header .lieu {
   background-color: #eaeaea;
@@ -51,12 +50,20 @@ header .lieu__p {
 }
 header .indication {
   background-color: #f6f6f6;
+  padding: 20px 0 30px 0;
+}
+header .indication h1 {
+  margin: 0 50px 20px 50px;
+}
+header .indication .indication_info {
+  margin: 0 50px 20px 50px;
 }
 header .explorez {
   background: linear-gradient(#9356DC, purple);
   box-shadow: 2px 2px gray;
   border-radius: 30px;
-  width: 220px;
+  width: 150px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,14 +94,15 @@ header .etapes i {
 
 .page_menus {
   border-radius: 10px 10px 0 0;
-  margin-top: -20px;
-  margin: 15px 0 0 0;
+  margin: 15px 0 -17px 0;
   background-color: #eaeaea;
+  padding-bottom: 25px;
 }
 .page_menus img {
-  width: 100%;
+  width: 91%;
   object-fit: cover;
   height: 250px;
+  margin-left: 42px;
 }
 
 .titre_menu {
@@ -106,9 +114,8 @@ header .etapes i {
 
 .choix {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   text-decoration: none;
-  margin: 0;
   margin: 10px 10px 10px 10px;
 }
 .choix h2 {
@@ -119,27 +126,47 @@ header .etapes i {
   justify-content: space-between;
   margin: 0 10px 0 10px;
 }
+.choix .prix:active {
+  background-color: #99E2D0;
+}
+
+.explorez_acceuil {
+  background: linear-gradient(#9356DC, purple);
+  box-shadow: 2px 2px gray;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 615px;
+  color: white;
+  width: 50%;
+  margin-left: 110px;
+}
+.explorez_acceuil:hover {
+  background: linear-gradient(#ae80e5, #b300b3);
+  transition-duration: 5s;
+  box-shadow: 3px 3px gray;
+}
 
 .explorez {
   background: linear-gradient(#9356DC, purple);
   box-shadow: 2px 2px gray;
   border-radius: 30px;
-  width: 220px;
+  width: 150px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 615px;
   color: white;
 }
-.explorez:hover {
-  transition: 500ms;
-  background: linear-gradient(#ae80e5, #b300b3);
-  box-shadow: 3px 3px gray;
-}
 
 .restaurants {
   background-color: #f6f6f6;
   padding: 5px 0 5px 0;
+  margin-bottom: -17px;
 }
 .restaurants img {
   width: 100%;
@@ -147,9 +174,8 @@ header .etapes i {
 }
 .restaurants .restaurant {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   text-decoration: none;
-  margin: 0;
 }
 .restaurants .restaurant__image {
   display: flex;
@@ -157,6 +183,7 @@ header .etapes i {
   height: 120px;
   flex-shrink: 0;
   min-width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 .restaurants .restaurant__details--titre {
   font-weight: bold;
@@ -172,9 +199,13 @@ header .etapes i {
 
 footer {
   background-color: #353535;
+  padding-bottom: 10px;
+  padding-left: 15px;
 }
 footer h3 {
   color: white;
+  padding-top: 15px;
+  font-size: 21px;
 }
 footer p {
   color: white;
@@ -186,6 +217,59 @@ footer .footer_icone i {
 footer .footer_icone p {
   color: white;
   margin-bottom: 0;
+}
+
+/* mobile et tablette */
+@media screen and (max-width: 870px) {
+  body {
+    margin: 0;
+  }
+
+  header .explorez {
+    margin-left: 100px;
+  }
+  header .etapes {
+    margin-left: 80px;
+  }
+
+  .logo_page_acceuil img {
+    width: 50%;
+  }
+
+  .restaurant {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  .logo_page_menu a {
+    margin-bottom: -15px;
+    margin-right: 0px;
+    margin-left: -25px;
+  }
+  .logo_page_menu img {
+    height: 55%;
+  }
+
+  .figure {
+    width: 111%;
+    margin-left: -46px;
+  }
+  .figure img {
+    border-radius: 0px 0px 30px 30px;
+  }
+
+  .titre_menu {
+    margin: 0 10px 0 10px;
+  }
+
+  .E_P_D {
+    margin-left: 10px;
+  }
+
+  .explorez {
+    margin-left: 130px;
+    margin-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

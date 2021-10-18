@@ -36,7 +36,8 @@ $back-color: #f6f6f6;
     background: linear-gradient($primary_color, purple);
     box-shadow: 2px 2px gray;
     border-radius: 30px;
-    width: 220px;
+    width: 150px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,9 +64,9 @@ $back-color: #f6f6f6;
 }
 @mixin figure {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     text-decoration: none;
-    margin: 0;
+    // margin: 0;
 }
 @mixin titre {
     font-weight: bold;

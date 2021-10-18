@@ -14,7 +14,7 @@ body {
     
 }
 
-.header_menu{
+.logo_page_menu{
     display: flex;
     justify-content: space-between;
     margin-right: 500px;
@@ -44,12 +44,19 @@ header {
     }
     .indication{
         @include indication;
+        padding: 20px 0 30px 0;
+            h1{
+                margin: 0 50px 20px 50px;
+            }
+            .indication_info{
+                margin: 0 50px 20px 50px;
+            }
     }
     .explorez{
         @include explorez;
 
         &__p{
-            color: white
+            color: white;
         }
 
     }
@@ -67,14 +74,16 @@ header {
 
 .page_menus{
     border-radius: 10px 10px 0 0;
-    margin-top: -20px;
-    margin: 15px 0 0 0;
+    // margin-top: -20px;
+    margin: 15px 0 -17px 0;
     background-color: #eaeaea;
+    padding-bottom: 25px;
 
     img{
-        width: 100%;
+        width: 91%;
         object-fit: cover;
         height: 250px;
+        margin-left: 42px;
     }
 }
 .titre_menu{
@@ -87,6 +96,7 @@ header {
 .choix{
     @include figure;
     margin: 10px 10px 10px 10px;
+    
     h2{
         margin: 0 10px 0 10px; 
     }
@@ -95,26 +105,39 @@ header {
         justify-content: space-between;
         margin: 0 10px 0 10px;
     }
+
+    .prix{
+        &:active{
+        background-color: $secondary_color;
+        }
+    }
 } 
-.explorez{
+.explorez_acceuil{
     @include explorez;
     color: white;
+    width: 50%;
+    margin-left: 110px;
     
+        
         &:hover{
-            transition: 500ms;
+            // transition-duration: 5s;
             background: linear-gradient(
                 lighten($primary_color, 10%),
                 lighten(purple, 10%) 
             );
-            // transition-duration: 500ms;
+            transition-duration: 5s;
             box-shadow: 3px 3px gray;
         }
-    
+}
+.explorez{
+    @include explorez;
+    color: white;
 }
 
 .restaurants{
         background-color: $back-color;
         padding: 5px 0 5px 0;
+        margin-bottom: -17px;
 
         img{
             width: 100%;
@@ -130,6 +153,7 @@ header {
             height: 120px;
             flex-shrink: 0;
             min-width: 100%;
+            border-radius: 20px 20px 0 0;
         }
         &__details{
 
@@ -145,13 +169,18 @@ header {
 
 footer{
     background-color: #353535;
-
-    h3{
-    color: white;
-    }
-    p{
+    padding-bottom: 10px;
+    padding-left: 15px;
+        
+        h3{
         color: white;
-    }
+        padding-top: 15px;
+        font-size: 21px;
+        
+        }
+        p{
+            color: white;
+        }
 
     .footer_icone{
         
@@ -163,5 +192,61 @@ footer{
             color: white;
             margin-bottom: 0;
         }
+    }
+}
+
+/* mobile et tablette */
+@media screen and (max-width: 870px) {
+
+    body{
+        margin: 0;
+    }
+
+    header{
+        .explorez{
+            margin-left: 100px;
+        }
+        .etapes{
+            margin-left: 80px;
+        }
+    }
+    
+    .logo_page_acceuil{
+        img{
+            width: 50%;
+        }
+    }
+    .restaurant{
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .logo_page_menu{
+        a{
+            margin-bottom: -15px;
+            margin-right: 0px;
+            margin-left: -25px;
+        }
+        img{
+            height: 55%;
+        }
+    }
+    .figure{
+        width: 111%;
+        margin-left: -46px;
+            img{
+                border-radius: 0px 0px 30px 30px;
+            }
+    }
+    .titre_menu{
+        margin: 0 10px 0 10px;
+    }
+    .E_P_D{
+        margin-left: 10px;
+    }
+
+    .explorez{
+        margin-left: 130px;
+        margin-top: 30px;
     }
 }
