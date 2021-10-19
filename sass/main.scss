@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
 body {
+    margin: 0;
     // max-width: 400px;
     h2{
         color: black;
@@ -12,6 +13,10 @@ body {
         text-decoration: none;
     }
     
+}
+
+.logo_page_acceuil{
+    margin: 10px 0 10px 0;
 }
 
 .logo_page_menu{
@@ -111,6 +116,11 @@ header {
         background-color: $secondary_color;
         }
     }
+    &.choix1{
+        transition: transform 1s;
+        transform: translateY(20px);
+        
+    }
 } 
 .explorez_acceuil{
     @include explorez;
@@ -125,8 +135,8 @@ header {
                 lighten($primary_color, 10%),
                 lighten(purple, 10%) 
             );
-            transition-duration: 5s;
             box-shadow: 3px 3px gray;
+            transition-duration: 1s;
         }
 }
 .explorez{
@@ -198,9 +208,9 @@ footer{
 /* mobile et tablette */
 @media screen and (max-width: 870px) {
 
-    body{
-        margin: 0;
-    }
+    // body{
+    //     margin: 0;
+    // }
 
     header{
         .explorez{

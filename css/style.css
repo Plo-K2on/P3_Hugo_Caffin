@@ -3,6 +3,9 @@
   src: url("./Raleway/Raleway-VariableFont_wght.ttf");
   font-weight: 100 1000;
 }
+body {
+  margin: 0;
+}
 body h2 {
   color: black;
 }
@@ -11,6 +14,10 @@ body p {
 }
 body a {
   text-decoration: none;
+}
+
+.logo_page_acceuil {
+  margin: 10px 0 10px 0;
 }
 
 .logo_page_menu {
@@ -129,6 +136,10 @@ header .etapes i {
 .choix .prix:active {
   background-color: #99E2D0;
 }
+.choix.choix1 {
+  transition: transform 1s;
+  transform: translateY(20px);
+}
 
 .explorez_acceuil {
   background: linear-gradient(#9356DC, purple);
@@ -146,8 +157,8 @@ header .etapes i {
 }
 .explorez_acceuil:hover {
   background: linear-gradient(#ae80e5, #b300b3);
-  transition-duration: 5s;
   box-shadow: 3px 3px gray;
+  transition-duration: 1s;
 }
 
 .explorez {
@@ -221,10 +232,6 @@ footer .footer_icone p {
 
 /* mobile et tablette */
 @media screen and (max-width: 870px) {
-  body {
-    margin: 0;
-  }
-
   header .explorez {
     margin-left: 100px;
   }
