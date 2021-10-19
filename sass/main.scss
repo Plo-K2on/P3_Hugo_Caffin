@@ -1,8 +1,12 @@
 @import "./variables.scss";
+@import "./animations.scss";
 
 body {
     margin: 0;
     // max-width: 400px;
+    h1{
+        font-size: 22px;
+    }
     h2{
         color: black;
     }
@@ -47,16 +51,26 @@ header {
             margin-left: 10px
         }
     }
+    
+    .fonctionnement{
+        @include fonctionnement;
+    }
+    
     .indication{
         @include indication;
-        padding: 20px 0 30px 0;
             h1{
-                margin: 0 50px 20px 50px;
+                width: 220px;
+                text-align: center;
+                font-size: 22px;
+
             }
             .indication_info{
-                margin: 0 50px 20px 50px;
+                width: 280px;
+                text-align: center;
+                font-size: 16px;
             }
     }
+
     .explorez{
         @include explorez;
 
@@ -79,7 +93,6 @@ header {
 
 .page_menus{
     border-radius: 10px 10px 0 0;
-    // margin-top: -20px;
     margin: 15px 0 -17px 0;
     background-color: #eaeaea;
     padding-bottom: 25px;
@@ -101,6 +114,8 @@ header {
 .choix{
     @include figure;
     margin: 10px 10px 10px 10px;
+    transition: transform 3s;
+    overflow: hidden;
     
     h2{
         margin: 0 10px 0 10px; 
@@ -117,27 +132,53 @@ header {
         }
     }
     &.choix1{
-        transition: transform 1s;
-        transform: translateY(20px);
-        
+        animation: choice 700ms linear forwards;
+    }
+    
+    &.choix2{
+        animation: choice 700ms 0.2s linear forwards;
+    }
+    
+    &.choix3{
+        animation: choice 700ms 0.4s linear forwards;
+    }
+    &:hover .prix{
+        animation: slide-price 500ms ease-in-out both;
+    }
+    .check {
+        display: flex;
+        justify-content: center;
+        right: 0%;
+        top: 0;
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        background-color: #99e2d0;
+        opacity: 0;
+        align-items: center;
+        & i {
+            font-size: 160%;
+            color: green;
+        }
+    }
+    &:hover .check{
+        animation: opacity-check 500ms 100ms linear forwards;
     }
 } 
+
 .explorez_acceuil{
     @include explorez;
     color: white;
     width: 50%;
-    margin-left: 110px;
-    
-        
-        &:hover{
-            // transition-duration: 5s;
-            background: linear-gradient(
-                lighten($primary_color, 10%),
-                lighten(purple, 10%) 
-            );
-            box-shadow: 3px 3px gray;
-            transition-duration: 1s;
-        }
+    &:hover{
+        // transition-duration: 5s;
+        background: linear-gradient(
+            lighten($primary_color, 10%),
+            lighten(purple, 10%) 
+        );
+        box-shadow: 3px 3px gray;
+        transition-duration: 1s;
+    }
 }
 .explorez{
     @include explorez;
@@ -205,22 +246,48 @@ footer{
     }
 }
 
-/* mobile et tablette */
-@media screen and (max-width: 870px) {
+/* loader spinner */
+.loader {
+    font-family: "Shrikhand";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    
+    background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+    animation: loader 2.5s 1.2s linear forwards;
 
-    // body{
-    //     margin: 0;
-    // }
-
-    header{
-        .explorez{
-            margin-left: 100px;
-        }
-        .etapes{
-            margin-left: 80px;
+    &__page {
+        border: 10px solid grey;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 20px solid #9356dc;
+        border-bottom: 20px solid #ff79da;
+        border-left: 20px solid#99e2d0;
+        border-right: 20px solid #99e2d0;
+        animation: loader__page 1.5s linear 1s forwards;
+        & p {
+            font-family: "Shrikhand";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
     }
-    
+}
+
+/* mobile et tablette */
+@media screen and (max-width: 870px) {
+   
     .logo_page_acceuil{
         img{
             width: 50%;

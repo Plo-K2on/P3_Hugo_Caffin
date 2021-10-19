@@ -3,8 +3,93 @@
   src: url("./Raleway/Raleway-VariableFont_wght.ttf");
   font-weight: 100 1000;
 }
+@keyframes choice {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slide-price {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
+@keyframes opacity-check {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader__page {
+  0% {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    border-top: 20px solid #9356DC;
+    border-bottom: 20px solid #30A387;
+  }
+  25% {
+    border-top: 20px solid #30A387;
+    border-bottom: 20px solid #9356DC;
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: rotate(180deg);
+    border-top: 20px solid #30A387;
+    border-bottom: 20px solid #9356DC;
+  }
+  75% {
+    opacity: 0.1;
+    border-top: 20px solid #9356DC;
+    border-bottom: 20px solid #30A387;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+    border-top: 20px solid #30A387;
+    border-bottom: 20px solid #9356DC;
+    opacity: 0;
+  }
+}
 body {
   margin: 0;
+}
+body h1 {
+  font-size: 22px;
 }
 body h2 {
   color: black;
@@ -55,15 +140,29 @@ header .lieu {
 header .lieu__p {
   margin-left: 10px;
 }
+header .fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 header .indication {
   background-color: #f6f6f6;
   padding: 20px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 header .indication h1 {
-  margin: 0 50px 20px 50px;
+  width: 220px;
+  text-align: center;
+  font-size: 22px;
 }
 header .indication .indication_info {
-  margin: 0 50px 20px 50px;
+  width: 280px;
+  text-align: center;
+  font-size: 16px;
 }
 header .explorez {
   background: linear-gradient(#9356DC, purple);
@@ -74,7 +173,6 @@ header .explorez {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 615px;
 }
 header .explorez__p {
   color: white;
@@ -85,7 +183,6 @@ header .etapes {
   width: 220px;
   display: flex;
   justify-content: center;
-  margin-left: 580px;
   margin-bottom: 15px;
 }
 header .etapes__chiffre {
@@ -124,6 +221,8 @@ header .etapes i {
   border-radius: 20px;
   text-decoration: none;
   margin: 10px 10px 10px 10px;
+  transition: transform 3s;
+  overflow: hidden;
 }
 .choix h2 {
   margin: 0 10px 0 10px;
@@ -137,8 +236,35 @@ header .etapes i {
   background-color: #99E2D0;
 }
 .choix.choix1 {
-  transition: transform 1s;
-  transform: translateY(20px);
+  animation: choice 700ms linear forwards;
+}
+.choix.choix2 {
+  animation: choice 700ms 0.2s linear forwards;
+}
+.choix.choix3 {
+  animation: choice 700ms 0.4s linear forwards;
+}
+.choix:hover .prix {
+  animation: slide-price 500ms ease-in-out both;
+}
+.choix .check {
+  display: flex;
+  justify-content: center;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  position: absolute;
+  background-color: #99e2d0;
+  opacity: 0;
+  align-items: center;
+}
+.choix .check i {
+  font-size: 160%;
+  color: green;
+}
+.choix:hover .check {
+  animation: opacity-check 500ms 100ms linear forwards;
 }
 
 .explorez_acceuil {
@@ -150,10 +276,8 @@ header .etapes i {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 615px;
   color: white;
   width: 50%;
-  margin-left: 110px;
 }
 .explorez_acceuil:hover {
   background: linear-gradient(#ae80e5, #b300b3);
@@ -170,7 +294,6 @@ header .etapes i {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 615px;
   color: white;
 }
 
@@ -230,15 +353,44 @@ footer .footer_icone p {
   margin-bottom: 0;
 }
 
+/* loader spinner */
+.loader {
+  font-family: "Shrikhand";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: loader 2.5s 1.2s linear forwards;
+}
+.loader__page {
+  border: 10px solid grey;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 20px solid #9356dc;
+  border-bottom: 20px solid #ff79da;
+  border-left: 20px solid #99e2d0;
+  border-right: 20px solid #99e2d0;
+  animation: loader__page 1.5s linear 1s forwards;
+}
+.loader__page p {
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /* mobile et tablette */
 @media screen and (max-width: 870px) {
-  header .explorez {
-    margin-left: 100px;
-  }
-  header .etapes {
-    margin-left: 80px;
-  }
-
   .logo_page_acceuil img {
     width: 50%;
   }
