@@ -244,6 +244,27 @@ header .etapes i {
 .choix.choix3 {
   animation: choice 700ms 0.4s linear forwards;
 }
+.choix.choix4 {
+  animation: choice 700ms 0.6s linear forwards;
+}
+.choix.choix5 {
+  animation: choice 700ms 0.8s linear forwards;
+}
+.choix.choix6 {
+  animation: choice 700ms 1s linear forwards;
+}
+.choix.choix7 {
+  animation: choice 700ms 1.2s linear forwards;
+}
+.choix.choix8 {
+  animation: choice 700ms 1.4s linear forwards;
+}
+.choix.choix9 {
+  animation: choice 700ms 1.6s linear forwards;
+}
+.choix.choix10 {
+  animation: choice 700ms 1.8s linear forwards;
+}
 .choix:hover .prix {
   animation: slide-price 500ms ease-in-out both;
 }
