@@ -198,13 +198,12 @@ header {
     color: white;
     width: 50%;
     &:hover{
-        // transition-duration: 5s;
+        transition:background-color 1s;
         background: linear-gradient(
             lighten($primary_color, 10%),
             lighten(purple, 10%) 
         );
         box-shadow: 3px 3px gray;
-        transition-duration: 1s;
     }
 }
 .explorez{

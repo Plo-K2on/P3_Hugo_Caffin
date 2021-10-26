@@ -301,9 +301,9 @@ header .etapes i {
   width: 50%;
 }
 .explorez_acceuil:hover {
+  transition: background-color 1s;
   background: linear-gradient(#ae80e5, #b300b3);
   box-shadow: 3px 3px gray;
-  transition-duration: 1s;
 }
 
 .explorez {
