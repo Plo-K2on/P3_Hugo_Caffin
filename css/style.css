@@ -82,7 +82,6 @@
     -webkit-transform: rotate(360deg);
     border-top: 20px solid #30A387;
     border-bottom: 20px solid #9356DC;
-    opacity: 0;
   }
 }
 body {
@@ -164,19 +163,6 @@ header .indication .indication_info {
   text-align: center;
   font-size: 16px;
 }
-header .explorez {
-  background: linear-gradient(#9356DC, purple);
-  box-shadow: 2px 2px gray;
-  border-radius: 30px;
-  width: 150px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .explorez__p {
-  color: white;
-}
 header .etapes {
   background-color: #f6f6f6;
   border-radius: 15px;
@@ -221,7 +207,6 @@ header .etapes i {
   border-radius: 20px;
   text-decoration: none;
   margin: 10px 10px 10px 10px;
-  transition: transform 3s;
   overflow: hidden;
 }
 .choix h2 {

@@ -69,14 +69,6 @@ header {
             }
     }
 
-    .explorez{
-        @include explorez;
-
-        &__p{
-            color: white;
-        }
-
-    }
     .etapes{
         @include etapes;
         
@@ -112,7 +104,7 @@ header {
 .choix{
     @include figure;
     margin: 10px 10px 10px 10px;
-    transition: transform 3s;
+    // transition: transform 3s;
     overflow: hidden;
     
     h2{
