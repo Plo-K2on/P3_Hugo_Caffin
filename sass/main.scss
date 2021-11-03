@@ -228,12 +228,14 @@ header {
             
             &--titre{
                 @include titre;
-                &:hover{
-                        i{
-                            color: green;
-                        }
-                    }
-                } 
+                .coeur_vide{
+                    
+                }
+                .coeur_plein{
+                    display: hidden;
+                    
+                }
+            } 
             &--description{
                 @include description;
             }
