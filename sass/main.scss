@@ -225,17 +225,15 @@ header {
             border-radius: 20px 20px 0 0;
         }
         &__details{
-
+            
             &--titre{
                 @include titre;
-                }
-            &--coeur{
                 &:hover{
-                    i {
-                        color: green;
+                        i{
+                            color: green;
+                        }
                     }
-                }
-            }
+                } 
             &--description{
                 @include description;
             }
@@ -316,6 +314,7 @@ footer{
     .logo_page_acceuil{
         img{
             width: 50%;
+            
         }
     }
     .restaurant{
@@ -327,10 +326,11 @@ footer{
         a{
             margin-bottom: -15px;
             margin-right: 0px;
-            margin-left: -25px;
+            margin-left: -9px;
         }
         img{
             height: 55%;
+            margin-right: -14px;
         }
     }
     .figure{
