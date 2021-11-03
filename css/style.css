@@ -333,6 +333,9 @@ header .etapes i {
   justify-content: space-between;
   margin: 0 15px 0 15px;
 }
+.restaurants .restaurant__details--coeur:hover i {
+  color: green;
+}
 .restaurants .restaurant__details--description {
   margin: 0 15px 0 15px;
 }

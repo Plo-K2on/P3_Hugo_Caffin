@@ -229,9 +229,16 @@ header {
             &--titre{
                 @include titre;
                 }
+            &--coeur{
+                &:hover{
+                    i {
+                        color: green;
+                    }
+                }
+            }
             &--description{
                 @include description;
-                }
+            }
         }
     }
 }
