@@ -201,6 +201,9 @@ header .etapes i {
   justify-content: space-between;
   margin: 10px 0 10px 0;
 }
+.titre_menu i:hover {
+  color: #30A387;
+}
 
 .choix {
   background-color: white;
@@ -333,11 +336,11 @@ header .etapes i {
   justify-content: space-between;
   margin: 0 15px 0 15px;
 }
-.restaurants .restaurant__details--titre .coeur_plein {
-  display: hidden;
-}
 .restaurants .restaurant__details--description {
   margin: 0 15px 0 15px;
+}
+.restaurants .restaurant i:hover {
+  color: #30A387;
 }
 
 footer {

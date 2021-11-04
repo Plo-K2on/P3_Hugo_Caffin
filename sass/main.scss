@@ -99,6 +99,9 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 10px 0 10px 0;
+        i:hover{
+            color: $thirty-color;
+        }
 }
 
 .choix{
@@ -228,17 +231,18 @@ header {
             
             &--titre{
                 @include titre;
-                .coeur_vide{
-                    
-                }
-                .coeur_plein{
-                    display: hidden;
-                    
-                }
-            } 
+                // .coeur_plein:hover{
+                //     display: hidden;
+                //     color: chartreuse;
+
+                // }
+            }
             &--description{
                 @include description;
             }
+        }
+        i:hover{
+            color: $thirty-color;
         }
     }
 }
