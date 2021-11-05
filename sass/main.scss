@@ -231,18 +231,35 @@ header {
             
             &--titre{
                 @include titre;
-                // .coeur_plein:hover{
-                //     display: hidden;
-                //     color: chartreuse;
-
-                // }
+                position: relative;
+            }
+            &--heart {
+                position: absolute;
+                right:5px;
+                i {
+                    &.fas {
+                        display: none;
+                    }
+                    &.far {
+                        display: inline;
+                    }
+                }
+                &:hover {
+                    transform: scale(1.8, 1.8);
+                    transition-duration: 0.5s;
+                    i {
+                        &.fas {
+                            display: inline;
+                        }
+                        &.far {
+                            display: none;
+                        }
+                    }
+                }
             }
             &--description{
                 @include description;
             }
-        }
-        i:hover{
-            color: $thirty-color;
         }
     }
 }

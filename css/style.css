@@ -335,12 +335,30 @@ header .etapes i {
   align-items: center;
   justify-content: space-between;
   margin: 0 15px 0 15px;
+  position: relative;
+}
+.restaurants .restaurant__details--heart {
+  position: absolute;
+  right: 5px;
+}
+.restaurants .restaurant__details--heart i.fas {
+  display: none;
+}
+.restaurants .restaurant__details--heart i.far {
+  display: inline;
+}
+.restaurants .restaurant__details--heart:hover {
+  transform: scale(1.8, 1.8);
+  transition-duration: 0.5s;
+}
+.restaurants .restaurant__details--heart:hover i.fas {
+  display: inline;
+}
+.restaurants .restaurant__details--heart:hover i.far {
+  display: none;
 }
 .restaurants .restaurant__details--description {
   margin: 0 15px 0 15px;
-}
-.restaurants .restaurant i:hover {
-  color: #30A387;
 }
 
 footer {
